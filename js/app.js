@@ -30,6 +30,7 @@ const rankOrder = ["LEADERSHIP", "PRESIDENTIAL", "HR", "MR", "LR"];
 
 const state = {
   accessToken: sessionStorage.getItem("discord_access_token"),
+  tokenExpiresAt: Number(sessionStorage.getItem("discord_token_expires_at") || 0),
   staff: [],
   filters: {
     role: "",
@@ -76,8 +77,10 @@ function readTokenFromHash() {
 
   const params = new URLSearchParams(window.location.hash.slice(1));
   const token = params.get("access_token");
+  const expiresIn = Number(params.get("expires_in") || 0);
+  const expiresAt = expiresIn ? Date.now() + expiresIn * 1000 : 0;
   window.history.replaceState({}, document.title, REDIRECT_URI);
-  return token;
+  return { token, expiresAt };
 }
 
 async function fetchDiscord(path, token) {
@@ -117,9 +120,22 @@ function showDatabase() {
   els.databaseView.hidden = false;
 }
 
+function clearDiscordSession() {
+  sessionStorage.removeItem("discord_access_token");
+  sessionStorage.removeItem("discord_token_expires_at");
+  state.accessToken = null;
+  state.tokenExpiresAt = 0;
+}
+
 async function verifyLogin() {
   if (!state.accessToken) {
     showLogin();
+    return;
+  }
+
+  if (state.tokenExpiresAt && Date.now() >= state.tokenExpiresAt) {
+    clearDiscordSession();
+    showLogin("Your Discord login expired. Please log in again.");
     return;
   }
 
@@ -132,8 +148,7 @@ async function verifyLogin() {
     ]);
 
     if (!isAuthorized(member)) {
-      sessionStorage.removeItem("discord_access_token");
-      state.accessToken = null;
+      clearDiscordSession();
       showLogin("Only Executive Assistant and higher can log in.");
       return;
     }
@@ -142,9 +157,8 @@ async function verifyLogin() {
     showDatabase();
     await loadStaffData();
   } catch (error) {
-    sessionStorage.removeItem("discord_access_token");
-    state.accessToken = null;
-    showLogin("Discord login could not be verified. Please try again.");
+    clearDiscordSession();
+    showLogin("Discord could not confirm your server roles. Please log in again.");
   }
 }
 
@@ -235,8 +249,7 @@ els.loginButton.addEventListener("click", () => {
 });
 
 els.logoutButton.addEventListener("click", () => {
-  sessionStorage.removeItem("discord_access_token");
-  state.accessToken = null;
+  clearDiscordSession();
   showLogin("Logged out.");
 });
 
@@ -246,7 +259,7 @@ els.updateButton.addEventListener("click", () => {
     return;
   }
 
-  setSyncStatus("Opening GitHub Actions. Click Run workflow there, then refresh this page after it finishes.");
+  setSyncStatus("Opening GitHub Actions. You need GitHub repo access, then click Run workflow there.");
   window.open(GITHUB_WORKFLOW_URL, "_blank", "noopener,noreferrer");
 });
 
@@ -264,11 +277,13 @@ els.clearFilters.addEventListener("click", () => {
   renderTable();
 });
 
-const tokenFromHash = readTokenFromHash();
+const loginResult = readTokenFromHash();
 
-if (tokenFromHash) {
-  state.accessToken = tokenFromHash;
-  sessionStorage.setItem("discord_access_token", tokenFromHash);
+if (loginResult?.token) {
+  state.accessToken = loginResult.token;
+  state.tokenExpiresAt = loginResult.expiresAt;
+  sessionStorage.setItem("discord_access_token", loginResult.token);
+  sessionStorage.setItem("discord_token_expires_at", loginResult.expiresAt.toString());
 }
 
 verifyLogin();
