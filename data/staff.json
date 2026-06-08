@@ -1,5 +1,160 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-06-08T21:22:54.919Z",
   "guildId": "1446923448822665380",
-  "staff": []
+  "staff": [
+    {
+      "userId": "1153022121056927874",
+      "username": "tyce",
+      "role": "Chairman",
+      "rank": "LEADERSHIP",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "1357429661834936510",
+      "username": "BuddyWinte",
+      "role": "Vice Chairman",
+      "rank": "LEADERSHIP",
+      "department": "N/A"
+    },
+    {
+      "userId": "1124081527505027085",
+      "username": "bear",
+      "role": "President",
+      "rank": "PRESIDENTIAL",
+      "department": "Operations"
+    },
+    {
+      "userId": "693930204296642561",
+      "username": "p",
+      "role": "President",
+      "rank": "PRESIDENTIAL",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "1312952372548472862",
+      "username": "Tori",
+      "role": "President",
+      "rank": "PRESIDENTIAL",
+      "department": "Public Relations"
+    },
+    {
+      "userId": "990122307315990611",
+      "username": "adrian the king",
+      "role": "Vice President",
+      "rank": "PRESIDENTIAL",
+      "department": "Public Relations"
+    },
+    {
+      "userId": "681125318878429239",
+      "username": "Ere",
+      "role": "Vice President",
+      "rank": "PRESIDENTIAL",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "1009481258411233400",
+      "username": "Sakuya",
+      "role": "Vice President",
+      "rank": "PRESIDENTIAL",
+      "department": "Operations"
+    },
+    {
+      "userId": "1350939517015556167",
+      "username": "♡",
+      "role": "Executive Officer",
+      "rank": "HR",
+      "department": "Operations"
+    },
+    {
+      "userId": "847892904516386897",
+      "username": "J ྀིྀིྀ",
+      "role": "Executive Officer",
+      "rank": "HR",
+      "department": "Public Relations"
+    },
+    {
+      "userId": "803691151009382441",
+      "username": "_jr_17",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Operations"
+    },
+    {
+      "userId": "1352221419676762112",
+      "username": "asher ۶ৎ",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Public Relations"
+    },
+    {
+      "userId": "1119717724185165824",
+      "username": "cheryl",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "N/A"
+    },
+    {
+      "userId": "1482797794371834016",
+      "username": "Emmy!",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Public Relations"
+    },
+    {
+      "userId": "1483719181026459788",
+      "username": "hereproof",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Operations"
+    },
+    {
+      "userId": "1391286729066938478",
+      "username": "𝚔𝚒𝚖",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "1267657222952063016",
+      "username": "Mintini",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "1505576012425986270",
+      "username": "𝕽𝖆𝖞",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "932092974408544416",
+      "username": "sarah",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "824487168827064360",
+      "username": "Sei",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "1278173971682168832",
+      "username": "vired",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Operations"
+    },
+    {
+      "userId": "921896194135949392",
+      "username": "xRogueBug",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "N/A"
+    }
+  ]
 }
