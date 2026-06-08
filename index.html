@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ujina Staff Database</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="login-view" class="auth-panel">
+        <div class="brand-block">
+          <p class="eyebrow">Discord Staff Directory</p>
+          <h1>Ujina Staff Database</h1>
+          <p class="lede">Sign in with Discord to view the live staff list.</p>
+        </div>
+        <button id="login-button" class="primary-button" type="button">Log in with Discord</button>
+        <p id="login-status" class="status-text" role="status"></p>
+      </section>
+
+      <section id="database-view" class="database-view" hidden>
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Ujina</p>
+            <h1>Staff Database</h1>
+          </div>
+          <div class="session-actions">
+            <span id="viewer-name" class="viewer-name"></span>
+            <button id="logout-button" class="secondary-button" type="button">Log out</button>
+          </div>
+        </header>
+
+        <section class="toolbar" aria-label="Staff filters">
+          <label>
+            <span>Role</span>
+            <select id="role-filter">
+              <option value="">All roles</option>
+            </select>
+          </label>
+          <label>
+            <span>Rank</span>
+            <select id="rank-filter">
+              <option value="">All ranks</option>
+            </select>
+          </label>
+          <label>
+            <span>Department</span>
+            <select id="department-filter">
+              <option value="">All departments</option>
+            </select>
+          </label>
+          <button id="clear-filters" class="icon-button" type="button" title="Clear filters" aria-label="Clear filters">Reset</button>
+        </section>
+
+        <section class="summary-strip" aria-label="Database summary">
+          <div>
+            <span id="visible-count">0</span>
+            <p>Visible staff</p>
+          </div>
+          <div>
+            <span id="total-count">0</span>
+            <p>Total staff</p>
+          </div>
+          <div>
+            <span id="last-updated">Not synced yet</span>
+            <p>Last update</p>
+          </div>
+        </section>
+
+        <section class="table-wrap" aria-label="Staff table">
+          <table>
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Rank</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody id="staff-table-body"></tbody>
+          </table>
+          <p id="empty-state" class="empty-state" hidden>No staff match these filters.</p>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
