@@ -92,6 +92,12 @@ h1 {
   background: var(--accent-strong);
 }
 
+.compact-button {
+  min-height: 42px;
+  padding: 0 14px;
+  box-shadow: none;
+}
+
 .secondary-button,
 .icon-button {
   padding: 0 14px;

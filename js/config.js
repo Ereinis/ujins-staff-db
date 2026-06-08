@@ -6,6 +6,8 @@ export const REDIRECT_URI = window.location.origin + window.location.pathname;
 
 export const STAFF_DATA_URL = "data/staff.json";
 
+export const GITHUB_WORKFLOW_URL = "https://github.com/Ereinis/ujins-staff-db/actions/workflows/update-staff.yml";
+
 export const AUTHORIZED_ROLE_IDS = new Set([
   "1460789923660693720",
   "1448497242515439706",

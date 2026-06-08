@@ -33,6 +33,20 @@ export const DISCORD_CLIENT_ID = "REPLACE_WITH_DISCORD_CLIENT_ID";
 
 with your Discord application client ID. This value is public and is safe to include in a static website.
 
+Then replace:
+
+```js
+export const GITHUB_WORKFLOW_URL = "REPLACE_WITH_GITHUB_ACTIONS_WORKFLOW_URL";
+```
+
+with the GitHub Actions workflow page URL for this repository, for example:
+
+```js
+export const GITHUB_WORKFLOW_URL = "https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPO-NAME/actions/workflows/update-staff.yml";
+```
+
+The in-website update button opens that workflow page for authorized viewers. Because this is a GitHub-only static site, the website cannot securely run the workflow directly without exposing a private GitHub token.
+
 ## GitHub Repository Secrets
 
 Add these repository secrets:

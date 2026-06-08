@@ -1,6 +1,7 @@
 import {
   AUTHORIZED_ROLE_IDS,
   DISCORD_CLIENT_ID,
+  GITHUB_WORKFLOW_URL,
   REDIRECT_URI,
   SERVER_ID,
   STAFF_DATA_URL
@@ -43,6 +44,8 @@ const els = {
   loginButton: document.querySelector("#login-button"),
   loginStatus: document.querySelector("#login-status"),
   logoutButton: document.querySelector("#logout-button"),
+  updateButton: document.querySelector("#update-button"),
+  syncStatus: document.querySelector("#sync-status"),
   viewerName: document.querySelector("#viewer-name"),
   roleFilter: document.querySelector("#role-filter"),
   rankFilter: document.querySelector("#rank-filter"),
@@ -99,6 +102,10 @@ function setLoginStatus(message) {
   els.loginStatus.textContent = message;
 }
 
+function setSyncStatus(message) {
+  els.syncStatus.textContent = message;
+}
+
 function showLogin(message = "") {
   els.loginView.hidden = false;
   els.databaseView.hidden = true;
@@ -142,6 +149,7 @@ async function verifyLogin() {
 }
 
 async function loadStaffData() {
+  setSyncStatus("Loading latest staff data...");
   const response = await fetch(`${STAFF_DATA_URL}?t=${Date.now()}`);
 
   if (!response.ok) {
@@ -157,6 +165,7 @@ async function loadStaffData() {
 
   populateFilters();
   renderTable();
+  setSyncStatus("Staff data loaded.");
 }
 
 function appendOptions(select, values) {
@@ -229,6 +238,16 @@ els.logoutButton.addEventListener("click", () => {
   sessionStorage.removeItem("discord_access_token");
   state.accessToken = null;
   showLogin("Logged out.");
+});
+
+els.updateButton.addEventListener("click", () => {
+  if (GITHUB_WORKFLOW_URL === "REPLACE_WITH_GITHUB_ACTIONS_WORKFLOW_URL") {
+    setSyncStatus("Add your GitHub Actions workflow URL in js/config.js first.");
+    return;
+  }
+
+  setSyncStatus("Opening GitHub Actions. Click Run workflow there, then refresh this page after it finishes.");
+  window.open(GITHUB_WORKFLOW_URL, "_blank", "noopener,noreferrer");
 });
 
 [els.roleFilter, els.rankFilter, els.departmentFilter].forEach((select) => {
