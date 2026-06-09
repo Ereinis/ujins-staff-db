@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T00:13:18.202Z",
+  "updatedAt": "2026-06-09T04:47:25.562Z",
   "guildId": "1446923448822665380",
   "staff": [
     {
@@ -131,6 +131,13 @@
     {
       "userId": "1505576012425986270",
       "username": "𝕽𝖆𝖞",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
+      "userId": "1502747226726731887",
+      "username": "Sam",
       "role": "Executive Assistant",
       "rank": "HR",
       "department": "Human Resources"
