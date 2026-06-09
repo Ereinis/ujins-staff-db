@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T15:41:02.520Z",
+  "updatedAt": "2026-06-09T18:13:02.824Z",
   "guildId": "1446923448822665380",
   "staff": [
     {
@@ -78,6 +78,13 @@
       "role": "Executive Assistant",
       "rank": "HR",
       "department": "Operations"
+    },
+    {
+      "userId": "1211207316037308468",
+      "username": "Aero",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
     },
     {
       "userId": "1352221419676762112",
