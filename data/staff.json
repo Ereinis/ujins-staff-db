@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-08T22:58:25.598Z",
+  "updatedAt": "2026-06-09T00:13:18.202Z",
   "guildId": "1446923448822665380",
   "staff": [
     {
@@ -101,6 +101,13 @@
       "department": "Public Relations"
     },
     {
+      "userId": "1423038957872087265",
+      "username": "Goatedavatar1",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Operations"
+    },
+    {
       "userId": "1483719181026459788",
       "username": "hereproof",
       "role": "Executive Assistant",
@@ -154,7 +161,7 @@
       "username": "xRogueBug",
       "role": "Executive Assistant",
       "rank": "HR",
-      "department": "N/A"
+      "department": "Operations"
     }
   ]
 }
