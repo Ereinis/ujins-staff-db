@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T18:13:02.824Z",
+  "updatedAt": "2026-06-09T20:30:10.855Z",
   "guildId": "1446923448822665380",
   "staff": [
     {
@@ -101,6 +101,13 @@
       "department": "N/A"
     },
     {
+      "userId": "633129180808347674",
+      "username": "Cry 👾",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
       "userId": "1482797794371834016",
       "username": "Emmy!",
       "role": "Executive Assistant",
@@ -120,6 +127,13 @@
       "role": "Executive Assistant",
       "rank": "HR",
       "department": "Operations"
+    },
+    {
+      "userId": "1509429384136753274",
+      "username": "Kas",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Human Resources"
     },
     {
       "userId": "1391286729066938478",
