@@ -4,7 +4,10 @@ export const DISCORD_CLIENT_ID = "1505290476343787651";
 
 export const REDIRECT_URI = window.location.origin + window.location.pathname;
 
-export const STAFF_DATA_URL = "data/staff.json";
+export const STAFF_DATA_URLS = [
+  "https://raw.githubusercontent.com/Ereinis/ujins-staff-db/main/data/staff.json",
+  "data/staff.json"
+];
 
 export const GITHUB_WORKFLOW_URL = "https://github.com/Ereinis/ujins-staff-db/actions/workflows/update-staff.yml";
 

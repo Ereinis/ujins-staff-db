@@ -4,7 +4,7 @@ import {
   GITHUB_WORKFLOW_URL,
   REDIRECT_URI,
   SERVER_ID,
-  STAFF_DATA_URL
+  STAFF_DATA_URLS
 } from "./config.js";
 
 const roleOrder = [
@@ -164,13 +164,31 @@ async function verifyLogin() {
 
 async function loadStaffData() {
   setSyncStatus("Loading latest staff data...");
-  const response = await fetch(`${STAFF_DATA_URL}?t=${Date.now()}`);
+  let payload = null;
 
-  if (!response.ok) {
-    throw new Error("Staff data could not be loaded.");
+  for (const url of STAFF_DATA_URLS) {
+    try {
+      const response = await fetch(`${url}?t=${Date.now()}`, {
+        cache: "no-store",
+        headers: {
+          "Cache-Control": "no-cache"
+        }
+      });
+
+      if (response.ok) {
+        payload = await response.json();
+        break;
+      }
+    } catch {
+      payload = null;
+    }
   }
 
-  const payload = await response.json();
+  if (!payload) {
+    setSyncStatus("Staff data could not be loaded.");
+    return;
+  }
+
   state.staff = payload.staff || [];
   els.totalCount.textContent = state.staff.length.toString();
   els.lastUpdated.textContent = payload.updatedAt

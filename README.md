@@ -9,7 +9,7 @@ The website is view-only. Staff data is auto-generated from Discord roles and sh
 1. GitHub Actions runs `scripts/update-staff.mjs` on a schedule or manual trigger.
 2. The script fetches members from Discord server `1446923448822665380`.
 3. Members with one of the configured staff roles are written to `data/staff.json`.
-4. The static website lets authorized Discord users view and filter the staff table.
+4. The static website reads the latest `data/staff.json` from GitHub and lets authorized Discord users view and filter the staff table.
 
 ## Important Privacy Note
 
