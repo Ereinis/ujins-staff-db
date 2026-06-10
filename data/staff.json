@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-10T19:14:12.368Z",
+  "updatedAt": "2026-06-10T21:36:48.689Z",
   "guildId": "1446923448822665380",
   "staff": [
     {
@@ -39,7 +39,7 @@
     },
     {
       "userId": "990122307315990611",
-      "username": "crack a toe",
+      "username": "adrian simply king",
       "role": "Vice President",
       "rank": "PRESIDENTIAL",
       "department": "Public Relations"
@@ -85,6 +85,13 @@
       "role": "Executive Assistant",
       "rank": "HR",
       "department": "Human Resources"
+    },
+    {
+      "userId": "1335670177802489959",
+      "username": "Ahsoka Tano",
+      "role": "Executive Assistant",
+      "rank": "HR",
+      "department": "Operations"
     },
     {
       "userId": "1352221419676762112",
