@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-12T19:11:09.081Z",
+  "updatedAt": "2026-06-12T21:14:55.519Z",
   "guildId": "1446923448822665380",
   "staff": [
     {
@@ -66,6 +66,13 @@
       "department": "Operations"
     },
     {
+      "userId": "1483719181026459788",
+      "username": "hereproof",
+      "role": "Executive Officer",
+      "rank": "HR",
+      "department": "Human Resources"
+    },
+    {
       "userId": "847892904516386897",
       "username": "J ྀིྀིྀ",
       "role": "Executive Officer",
@@ -129,13 +136,6 @@
       "department": "Operations"
     },
     {
-      "userId": "1483719181026459788",
-      "username": "hereproof",
-      "role": "Executive Assistant",
-      "rank": "HR",
-      "department": "Human Resources"
-    },
-    {
       "userId": "1509429384136753274",
       "username": "Kas",
       "role": "Executive Assistant",
@@ -158,7 +158,7 @@
     },
     {
       "userId": "1505576012425986270",
-      "username": "𝓡𝓪𝔂",
+      "username": "𝑅𝒶𝓎",
       "role": "Executive Assistant",
       "rank": "HR",
       "department": "Human Resources"
